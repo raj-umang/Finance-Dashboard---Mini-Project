@@ -9,10 +9,8 @@
 }
 
 .content{
-<<<<<<< HEAD
     flex: 4;
     padding: 20px;
-=======
  flex: 4;
  padding: 20px;
 }
@@ -37,5 +35,4 @@
 }
 .side{
     flex: 1;
->>>>>>> 275811ebec154810b434274e2d91492bce1a535e
 }

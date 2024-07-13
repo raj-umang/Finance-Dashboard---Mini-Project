@@ -1,8 +1,10 @@
 import React from 'react'
 import card from '../ui/dashboard/card/card'
-import styles from "..ui/dashboard/dashboard.module.css"
+import styles from "../ui/dashboard/dashboard.module.css"
 import rightbar from '../ui/dashboard/rightbar/rightbar'
-import transaction from '../ui/dashboard/transaction/transaction'
+import Transaction from '../ui/dashboard/transaction/transaction'
+import Rightbar from '../ui/dashboard/rightbar/rightbar'
+import Chart from '../ui/dashboard/chart/chart'
 
 const Dashboard = () => {
   return (

@@ -1,6 +1,6 @@
 import styles from './transaction.module.css'
 
-function transaction() {
+function Transaction() {
   return (
     <div className={styles.container}>
       <h2 className={styles.title}>Latest Transactions</h2>
@@ -50,4 +50,4 @@ function transaction() {
   )
 }
 
-export default transaction
+export default Transaction

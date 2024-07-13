@@ -9,6 +9,33 @@
 }
 
 .content{
+<<<<<<< HEAD
     flex: 4;
     padding: 20px;
+=======
+ flex: 4;
+ padding: 20px;
+}
+
+.wapper{
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.main{
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.cards{
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+}
+.side{
+    flex: 1;
+>>>>>>> 275811ebec154810b434274e2d91492bce1a535e
 }

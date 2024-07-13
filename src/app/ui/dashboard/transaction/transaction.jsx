@@ -23,25 +23,23 @@ function transaction() {
         <td>14.02.2024</td>
         <td>$3.200</td>
           </tr>
-
-
           <tr>
         <td>
           <image src="/noavatar.png" alt="" width={40} height={40} className={styles.userImage} />
           John Doe
         </td>
-        <td> <span className={`${styles.status} ${styles.pending}`}>pending</span></td>
+        <td> <span className={`${styles.status} ${styles.done}`}>Done</span></td>
         <td>14.02.2024</td>
         <td>$3.200</td>
           </tr>
-
-
           <tr>
         <td>
+          <div className={styles.user}> 
           <image src="/noavatar.png" alt="" width={40} height={40} className={styles.userImage} />
           John Doe
+          </div>
         </td>
-        <td> <span className={`${styles.status} ${styles.pending}`}>pending</span></td>
+        <td> <span className={`${styles.status} ${styles.cancelled}`}>Cancelled</span></td>
         <td>14.02.2024</td>
         <td>$3.200</td>
           </tr>

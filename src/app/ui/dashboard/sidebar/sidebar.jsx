@@ -12,6 +12,7 @@ import {
   MdOutlineSettings,
   MdHelpCenter,
   MdLogout,
+  MdControlPoint,
 } from "react-icons/md";
 import Image from "next/image";
 
@@ -30,9 +31,9 @@ const menuItems = [
         icon: <MdSupervisedUserCircle />,
       },
       {
-        title: "Products",
-        path: "/dashboard/products",
-        icon: <MdShoppingBag />,
+        title: "Add Transaction",
+        path: "/dashboard/transaction",
+        icon: <MdControlPoint />,
       },
       {
         title: "Transactions",

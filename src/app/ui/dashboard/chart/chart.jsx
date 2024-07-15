@@ -1,3 +1,4 @@
+"use client";
 import {
   LineChart,
   Line,
@@ -64,7 +65,7 @@ const Chart = () => {
         >
           <XAxis dataKey="name" />
           <YAxis />
-          <Tooltip contentStyle={{background:"#151c2c",border:"none"}}/>
+          <Tooltip contentStyle={{ background: "#151c2c", border: "none" }} />
           <Legend />
           <Line
             type="monotone"

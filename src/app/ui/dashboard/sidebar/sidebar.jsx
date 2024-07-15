@@ -12,6 +12,7 @@ import {
   MdOutlineSettings,
   MdHelpCenter,
   MdLogout,
+  MdControlPoint,
 } from "react-icons/md";
 import Image from "next/image";
 
@@ -32,7 +33,7 @@ const menuItems = [
       {
         title: "Add Transaction",
         path: "/dashboard/transaction",
-        icon: <MdShoppingBag />,
+        icon: <MdControlPoint />,
       },
       {
         title: "Transactions",

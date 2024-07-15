@@ -1,5 +1,6 @@
 import styles from "./card.module.css";
-import {MdSupervisedUserCircle} from 'react-icons/md'
+import { MdSupervisedUserCircle } from "react-icons/md";
+
 function Card() {
   return (
     <div className={styles.container}>

@@ -1,5 +1,5 @@
-import Image from "next/image";
 import styles from "./transaction.module.css";
+import Image from "next/image";
 
 function Transaction() {
   return (

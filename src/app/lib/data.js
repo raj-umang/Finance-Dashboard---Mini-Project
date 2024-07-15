@@ -1,4 +1,4 @@
-import { User } from "./models"
+import { Expense, User } from "./models"
 import { connectToDb } from "./utils";
 
 export const fetchUsers = async () =>{
@@ -8,5 +8,15 @@ export const fetchUsers = async () =>{
         return users;
     } catch (error) {
         throw new Error("Failed to fetch new users")
+    }
+}
+
+export const fetchTransactions = async ()=>{
+    try {
+        connectToDb();
+        const transactions = await Expense.find();
+        return Expense;
+    } catch (error) {
+        throw new Error("failed to fetch transaction")
     }
 }

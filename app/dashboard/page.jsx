@@ -6,7 +6,7 @@ import Card from "../ui/dashboard/card/Card";
 const Dashboard = () => {
   return (
     <div className="flex gap-5">
-      <div className="flex-3 flex flex-col g-5">
+      <div className="basis-3 flex flex-col g-5">
         <div className='flex g-5 justify-between my-2'>
           <Card />
           <Card />

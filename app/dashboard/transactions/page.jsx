@@ -3,7 +3,7 @@ import React from 'react'
 
 const TransactionHistory = () => {
   return (
-    <div>
+    <div className='h-[88vh]'>
     <h2 className='ml-10'>Transaction History</h2>
     <Transaction/>
     </div>

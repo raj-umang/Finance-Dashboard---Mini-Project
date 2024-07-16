@@ -1,8 +1,14 @@
-import React from 'react'
+import { ExpenseInvestmentSavings } from '@/app/lib/data'
 
 const Test = () => {
+    async function getData(){
+      const items = await ExpenseInvestmentSavings();
+      console.log(items)
+    }
+    getData();
   return (
-    <div>page</div>
+    <div>
+    </div>
   )
 }
 

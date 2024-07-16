@@ -1,4 +1,4 @@
-const { default: mongoose } = require("mongoose");
+import mongoose from "mongoose";
 
 const expenseSchema = new mongoose.Schema(
   {
@@ -9,7 +9,7 @@ const expenseSchema = new mongoose.Schema(
     trasaction_amount: {
       type: Number,
       required: true,
-      min:0
+      min: 0
     },
     transaction_category: {
       type: String,
@@ -48,5 +48,4 @@ const userSchema = new mongoose.Schema(
 );
 
 export const User = mongoose.models.User || mongoose.model("User", userSchema);
-export const Expense =
-  mongoose.models.Transaction || mongoose.model("Transaction", expenseSchema);
+export const Expense = mongoose.models.Transaction || mongoose.model("Transaction", expenseSchema);

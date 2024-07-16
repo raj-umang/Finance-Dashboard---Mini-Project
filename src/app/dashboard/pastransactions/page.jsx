@@ -3,10 +3,10 @@ import React from 'react'
 
 const TransactionHistory = () => {
   return (
-    <>
-    <h2>Transaction History</h2>
+    <div>
+    <h2 className='ml-10'>Transaction History</h2>
     <Transaction/>
-    </>
+    </div>
   )
 }
 

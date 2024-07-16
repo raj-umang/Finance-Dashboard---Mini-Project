@@ -15,11 +15,29 @@ export const fetchTransactions = async () => {
     try {
         connectToDb();
         const transactions = await Expense.find();
-        return Expense;
+        return transactions;
     } catch (error) {
         throw new Error("failed to fetch transaction")
     }
 }
+
+// export const ExpenseInvestmentSavings = async () => {
+//     try {
+//         connectToDb();
+//         const transactions = await Expense.find();
+//         const income = transactions.filter((item) => (item.transaction_type === 'Income'))
+//         const expenses = transactions.filter((item) => (item.transaction_type === 'Expenses'))
+//         const savings = transactions.filter((item) => (item.transaction_type === 'Saving'))
+//         const stats = {
+//             inc:income,
+//             sav:savings,
+//             exp:expenses
+//         }
+//         console.log(stats.inc)
+//     } catch (error) {
+//         throw new Error("failed to fetch transaction")
+//     }
+// }
 
 export const fetchTransaction = async (q) => {
     const regex = new RegExp(q, 'i')

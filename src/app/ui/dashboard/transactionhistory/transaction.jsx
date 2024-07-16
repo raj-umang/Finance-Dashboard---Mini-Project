@@ -13,7 +13,7 @@ const Transaction = () => {
           <th className='basis-1/5'>Amount</th>
         </tr>
       </thead>
-      <tbody className='flex flex-col w-full overflow-y-auto'>
+      <tbody className='flex flex-col w-full overflow-y-auto mt-4'>
         {TempTransctions.map((items, index) => (
           <tr key={index} className='flex w-full h-[3rem] items-center'>
             <td className='basis-1/5 text-center'>{items.createdAt.split('T')[0]}</td>

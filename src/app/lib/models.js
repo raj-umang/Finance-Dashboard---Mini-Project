@@ -9,6 +9,7 @@ const expenseSchema = new mongoose.Schema(
     trasaction_amount: {
       type: Number,
       required: true,
+      min:0
     },
     transaction_category: {
       type: String,

@@ -1,9 +1,9 @@
-import { Expense, User } from "./models"
-import { connectToDb } from "./utils";
+import { Expense, User } from "./models";
+import { connect } from "../lib/utils";
 
 export const fetchUsers = async (q) => {
     try {
-        connectToDb();
+        connect();
         const users = await User.find();
         return users;
     } catch (error) {
@@ -13,7 +13,7 @@ export const fetchUsers = async (q) => {
 
 export const fetchTransactions = async () => {
     try {
-        connectToDb();
+        connect();
         const transactions = await Expense.find();
         return transactions;
     } catch (error) {
@@ -24,7 +24,7 @@ export const fetchTransactions = async () => {
 
 export const ExpenseInvestmentSavings = async () => {
     try {
-        connectToDb();
+        connect();
         const transactions = await Expense.find();
         const income = transactions.filter((item) => (item.transaction_type === 'Income'))
         const expenses =  transactions.filter((item) => (item.transaction_type === 'Expenses'))
@@ -43,7 +43,7 @@ export const ExpenseInvestmentSavings = async () => {
 export const fetchTransaction = async (q) => {
     const regex = new RegExp(q, 'i')
     try {
-        connectToDb();
+        connect();
         const Expense = await Expense.find({ transaction_category: { $regex: regex } });
         return Expense;
     } catch (error) {
@@ -149,3 +149,4 @@ export const TempTransctions = [
         updatedAt: "2024-07-12T19:00:00Z"
     }
 ]
+

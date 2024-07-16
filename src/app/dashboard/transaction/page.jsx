@@ -6,7 +6,7 @@ import { useRouter } from "next/navigation";
 import { entryTypes } from "@/app/constants/data";
 import { IoMdAddCircleOutline } from "react-icons/io";
 import PageHeader from "@/components/shared/PageHeader";
-import { Spinner } from "@/components/shared/Spinner";
+import Spinner  from "@/components/shared/Spinner";
 import { uuid } from "uuidv4";
 import toast from "react-hot-toast";
 

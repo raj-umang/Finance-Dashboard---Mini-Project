@@ -37,11 +37,7 @@ export default function TransactionPage() {
 
     try {
       // Update the actual data if there is another existing data
-      const existingData = JSON.parse(localStorage.getItem("entries") || "[]");
-
-      existingData.push(formData);
-      localStorage.setItem("entries", JSON.stringify(existingData));
-
+      // send to  backend
       toast.success("Amount created successfully!");
       router.push("/dashboard/home");
     } catch (error) {

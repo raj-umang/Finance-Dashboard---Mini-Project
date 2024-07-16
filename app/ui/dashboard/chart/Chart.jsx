@@ -47,8 +47,8 @@ const Chart = () => {
     },
   ];
   return (
-    <div>
-      <h2 >Weekly Recap</h2>
+    <div className="my-2 h-[450px] bg-[#182237] p-5 rounded-lg">
+      <h2 className="font-extralight text-[#b7bac1] mb-5">Weekly Recap</h2>
       <ResponsiveContainer width="100%" height="90%">
         <LineChart
           width={500}

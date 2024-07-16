@@ -1,27 +1,29 @@
-import { DummyTransactions, HomeTransactions } from "@/app/lib/data";
+import {  HomeTransactions } from "@/app/lib/data";
 function Transaction() {
   return (
-    <div >
-      <h2>Latest Transactions</h2>
-      <table >
-        <thead>
-          <tr>
-            <td>Type</td>
-            <td>Date</td>
-            <td>Category</td>
-            <td>Amount</td>
+    <div className="bg-[#182237] p-5 rounded-lg my-2">
+      <h2 className="mb-5 font-extralight text-[#b7bac1]">Latest Transactions</h2>
+      <table className='flex flex-col w-11/12 mx-auto h-4/6 mt-8 bg-[#151C2C] border-2 border-[#182237] rounded-md'>
+      <thead className='flex'>
+        <tr className='basis-full items-center flex bg-[#182237] h-[3rem]' >
+          <th className='basis-1/5'>Date</th>
+          <th className='basis-1/5'>Type</th>
+          <th className='basis-1/5'>Category</th>
+          <th className='basis-2/5'>Comment</th>
+          <th className='basis-1/5'>Amount</th>
+        </tr>
+      </thead>
+      <tbody className='flex flex-col w-full overflow-y-auto mt-4'>
+        {HomeTransactions.map((items, index) => (
+          <tr key={index} className='flex w-full h-[3rem] items-center'>
+            <td className='basis-1/5 text-center'>{items.createdAt.split('T')[0]}</td>
+            <td className='basis-1/5 text-center'>{items.transaction_type}</td>
+            <td className='basis-1/5 text-center'>{items.transaction_category}</td>
+            <td className='basis-2/5 text-center'>{items.transaction_comments}</td>
+            <td className='basis-1/5 text-center'>{items.transaction_amount}</td>
           </tr>
-        </thead>
-        <tbody>
-          {HomeTransactions.map((item,key)=>(
-            <tr key={key}>
-              <th>{item.transaction_type}</th>
-              <th>{item.createdAt}</th>
-              <th>{item.transaction_category}</th>
-              <th>{item.transaction_amount}</th>
-            </tr>
-          ))}
-        </tbody>
+        ))}
+      </tbody>
       </table>
     </div>
   );

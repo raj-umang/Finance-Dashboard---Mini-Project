@@ -61,22 +61,23 @@ const menuItems = [
 
 const Sidebar = () => {
   return (
-    <div >
-      <div >
+    <div className="sticky top-10">
+      <div className="flex items-center gap-5 mb-5">
         <Image
           src="/noavatar.png"
           alt=""
           width="50"
           height="50"
+          className="rounded-full object-cover"
         />
-        <div >
-          <span>John Doe</span>
+        <div className="flex flex-col">
+          <span className="font-medium">John Doe</span>
         </div>
       </div>
-      <ul>
+      <ul className="list-none">
         {menuItems.map((cat) => (
-          <li key={cat.title} className="">
-            <span className="styles.cat">{cat.title}</span>
+          <li key={cat.title} >
+            <span className="text-[#b7bac1] font-bold text-sm my-[10px]">{cat.title}</span>
             {cat.list.map((item) => (
               <MenuLink item={item} key={item.title} />
             ))}

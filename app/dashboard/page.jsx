@@ -1,13 +1,13 @@
 import React from "react";
-import Card from "../ui/dashboard/card/card";
 import Transaction from "../ui/dashboard/transaction_table/home/transaction";
 import Chart from "../ui/dashboard/chart/chart";
+import Card from "../ui/dashboard/card/Card";
 
 const Dashboard = () => {
   return (
-    <div>
-      <div >
-        <div >
+    <div className="flex gap-5">
+      <div className="flex-3 flex flex-col g-5">
+        <div className='flex g-5 justify-between my-2'>
           <Card />
           <Card />
           <Card />

@@ -4,7 +4,7 @@ const Transaction = () => {
   return (
     <table className='flex flex-col w-11/12 mx-auto h-4/6 mt-8 bg-[#151C2C] border-2 border-[#182237] rounded-md'>
       <thead className='flex'>
-        <tr className='basis-full items-center flex bg-[#182237] h-[3rem]'>
+        <tr className='basis-full items-center flex bg-[#182237] h-[3rem]' >
           <th className='basis-1/5'>Date</th>
           <th className='basis-1/5'>Type</th>
           <th className='basis-1/5'>Category</th>

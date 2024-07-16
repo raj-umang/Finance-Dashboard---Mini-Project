@@ -9,7 +9,7 @@ import Link from "next/link";
 const UsersPage = async ({ searchParams }) => {
   const q = searchParams?.q || "";
   const page = searchParams?.page || 1;
-  const { count, users } = await fetchUsers(q, page);
+  const { count, users } = await fetchTransactions(q, page);
 
   return (
     <div className={styles.container}>

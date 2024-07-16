@@ -6,9 +6,9 @@ import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { useDebouncedCallback } from "use-debounce";
 
 const Search = ({ placeholder }) => {
-const searchParams = useSearchParams ();
-const { replace } = useRouter();
+const searchParams = useSearchParams (); 
 const pathname = usePathname();
+const { replace } = useRouter();
 
 const handleSearch = useDebouncedCallback((e) => {
 const params = new URLSearchParams(searchParams);

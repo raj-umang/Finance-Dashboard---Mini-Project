@@ -1,5 +1,3 @@
-# backend/app.py
-
 import numpy as np
 import pandas as pd
 import yfinance as yf
@@ -11,7 +9,6 @@ import matplotlib.pyplot as plt
 import io
 import base64
 
-# Load the trained model
 model_path = '/home/dexy/predict/backend/Stock Predictions Model.h5'
 model = load_model(model_path)
 
@@ -24,10 +21,8 @@ def predict():
     start = '2012-01-01'
     end = '2024-05-31'
 
-    # Download stock data
     data = yf.download(stock_symbol, start=start, end=end)
 
-    # Data preparation
     data_train = pd.DataFrame(data['Close'][0: int(len(data) * 0.80)])
     data_test = pd.DataFrame(data['Close'][int(len(data) * 0.80): len(data)])
 
@@ -43,13 +38,11 @@ def predict():
 
     x, y = np.array(x), np.array(y)
 
-    # Make predictions
     predictions = model.predict(x)
     scale = 1 / scaler.scale_[0]
     predictions = predictions * scale
     y = y * scale
 
-    # Generate plot
     plt.figure(figsize=(10, 5))
     plt.plot(y, label='Original Price', color='green')
     plt.plot(predictions, label='Predicted Price', color='red')
@@ -58,7 +51,6 @@ def predict():
     plt.ylabel('Price')
     plt.legend()
 
-    # Save plot to a PNG image
     img = io.BytesIO()
     plt.savefig(img, format='png')
     img.seek(0)

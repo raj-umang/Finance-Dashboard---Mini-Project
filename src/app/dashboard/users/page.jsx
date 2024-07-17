@@ -1,9 +1,11 @@
 import { fetchUsers } from "@/app/lib/data";
 import React from "react";
 
-const page = () => {
-  const users = fetchUsers()
+const UsersPage = async () => {
+  const users = await fetchUsers();
+
+  console.log(users);
   return <div>page</div>;
 };
 
-export default page;
+export default UsersPage;

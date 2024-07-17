@@ -4,6 +4,7 @@ import styles from "../ui/dashboard/dashboard.module.css";
 import Transaction from "../ui/dashboard/transaction/transaction";
 import Rightbar from "../ui/dashboard/rightbar/rightbar";
 import Chart from "../ui/dashboard/chart/chart";
+import "../globals.css";
 
 const Dashboard = () => {
   return (

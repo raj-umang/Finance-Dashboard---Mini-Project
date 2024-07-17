@@ -37,7 +37,7 @@ function Transaction() {
             <td>14.02.2024</td>
             <td>$3.200</td>
           </tr>
-          <tr>
+          <tr> 
             <td>
               <div className={styles.user}>
                 <Image

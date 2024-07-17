@@ -6,7 +6,10 @@ const CoreForm = () => {
             <div className="form-group">
                 <label htmlFor="type">Type</label>
 
-                <select name="type" className="type-selector h-10">
+                <select name="type" required className="type-selector h-10">
+                    <option value="" disabled>
+                        Select a category
+                    </option>
                     {entryTypes.map((item) => (
                         <option
                             key={item.value}
@@ -19,23 +22,24 @@ const CoreForm = () => {
 
             <div className="form-group">
                 <label htmlFor="amount">Amount (₹ Rupees)</label>
-                <input className="form-control" type="number" id="amount" name="amount" placeholder="20,000" />
+                <input required className="form-control" type="number" id="amount" name="amount" placeholder="20,000" />
             </div>
 
             <div className="form-group">
                 <label htmlFor="date">Date</label>
-                <input className="form-control" type="datetime-local" id="date" name="date" />
+                <input required className="form-control" type="datetime-local" id="date" name="date" />
             </div>
 
             <div className="form-group">
                 <label htmlFor="category">Category</label>
-                <select
+                <select required
                     id="category"
                     name="category"
                 >
                     <option value="" disabled>
                         Select a category
                     </option>
+                    <option value="salary">Salary</option>
                     <option value="recreation">Recreation</option>
                     <option value="food">Food</option>
                     <option value="travel">Travel</option>

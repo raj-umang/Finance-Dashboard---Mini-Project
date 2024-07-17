@@ -1,6 +1,6 @@
 
+import { addExpense } from '@/app/lib/data';
 import './form.css'
-import { addExpense } from "@/app/lib/formAction";
 import CoreForm from './formsub/coreForm';
 const Form = () => {
    

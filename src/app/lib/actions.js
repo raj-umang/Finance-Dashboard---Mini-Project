@@ -1,8 +1,6 @@
-<<<<<<< HEAD
 export const addExpense = async (fromData)=>{
     const {} = Object.fromEntries(FormData)
 }
-=======
 "use server";
 
 import { sessionOptions, defaultSession } from "../libs";
@@ -49,4 +47,3 @@ export const logout = async () => {
   session.destroy();
   redirect("/");
 };
->>>>>>> e347822 (auth updated)

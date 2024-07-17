@@ -5,13 +5,8 @@ import { useRouter } from "next/navigation";
 
 import { entryTypes } from "@/app/constants/data";
 import { IoMdAddCircleOutline } from "react-icons/io";
-<<<<<<< HEAD
-import PageHeader from "@/components/shared/PageHeader";
-import Spinner  from "@/components/shared/Spinner";
-=======
 import PageHeader from "../../../../components/shared/PageHeader";
 import Spinner from "../../../../components/shared/Spinner";
->>>>>>> e347822 (auth updated)
 import { uuid } from "uuidv4";
 import toast from "react-hot-toast";
 

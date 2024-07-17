@@ -31,7 +31,7 @@ export const authOptions = {
         } catch (err) {
           throw new Error(err);
         }
-        return null; // Return null if user not found or password incorrect
+        return null; 
       },
     }),
     GithubProvider({

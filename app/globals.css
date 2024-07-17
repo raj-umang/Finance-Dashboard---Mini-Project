@@ -2,42 +2,65 @@
 @tailwind components;
 @tailwind utilities;
 
-:root{
-  --bg:#151c2c;
-  --bgSoft:#182237;
-  --text:white;
-  --textSoft:#b7bac1;
+.custom-scrollbar::-webkit-scrollbar {
+  @apply w-4 h-4;
 }
 
-*{
+.custom-scrollbar::-webkit-scrollbar-track {
+  @apply bg-gray-200;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  @apply bg-gray-500 rounded-lg;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-600;
+}
+
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #6b7280 #e5e7eb;
+  /* For Firefox */
+}
+
+
+:root {
+  --bg: #151c2c;
+  --bgSoft: #182237;
+  --text: white;
+  --textSoft: #b7bac1;
+}
+
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body{
+body {
   background-color: var(--bg);
   color: var(--text);
 }
 
-a{
+a {
   color: inherit;
   text-decoration: none;
 }
 
 :root {
---primary-color: #2c3775;
---secondary-color: #e8ecff;
---auxiliary-color: #9f9f9f;
+  --primary-color: #2c3775;
+  --secondary-color: #e8ecff;
+  --auxiliary-color: #9f9f9f;
 
---primary-gradient-start: #e8ecff;
---primary-gradient-end: #ffffff;
+  --primary-gradient-start: #e8ecff;
+  --primary-gradient-end: #ffffff;
 }
 
 html,
 body,
 * {
-padding: 0;
-margin: 0;
-box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }

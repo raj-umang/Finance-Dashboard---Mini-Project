@@ -1,4 +1,4 @@
-import { IoAddCircleSharp, IoSettingsSharp } from "react-icons/io5";
+import { IoAddCircleSharp } from "react-icons/io5";
 import { RiDashboard2Fill } from "react-icons/ri";
 import { LuHistory } from "react-icons/lu";
 
@@ -17,14 +17,6 @@ export const navLinks = [
     href: "/dashboard/transactions",
     icon: LuHistory,
     label: "Transactions",
-  },
-];
-
-export const accountLinks = [
-  {
-    href: "/dashboard/settings",
-    icon: IoSettingsSharp,
-    label: "Settings",
   },
 ];
 

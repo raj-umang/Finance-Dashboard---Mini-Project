@@ -1,13 +1,13 @@
 import { fetchTransactions } from "@/app/lib/data";
 async function Transaction() {
   const HomeTransactions = await fetchTransactions();
-  function getTopFiveHighest(arr) {
-    return arr.slice().sort((a, b) => b - a).slice(0, 5);
+  function getTopFiveLatest(arr) {
+    return arr.slice().sort((a, b) => b.transaction_date - a.transaction_date).slice(0, 5);
   }
-  const topFive = getTopFiveHighest(HomeTransactions);
+  const topFive = getTopFiveLatest(HomeTransactions);
   return (
     <div className="bg-[#182237] p-5 rounded-lg my-2 h-[50vh]">
-      <h2 className="mb-5 font-extralight text-[#b7bac1]">Latest Transactions</h2>
+      <h2 className="mb-5 font-extralight text-xl text-[#b7bac1]">Latest Transactions</h2>
       <table className='flex flex-col w-11/12 mx-auto h-11/12  mt-8 bg-[#151C2C] border-2 border-[#151C2C] rounded-md'>
         <thead className='flex'>
           <tr className='basis-full items-center flex  h-[3rem]' >

@@ -3,7 +3,7 @@ import { fetchTransactions} from '@/app/lib/data'
 const Transaction = async() => {
   const HistoryTransactions = await fetchTransactions();
   return (
-    <table className='flex flex-col w-full  mx-auto max-h-5/6 mt-8 bg-[#151C2C] border-2 border-[#182237] rounded-md'>
+    <table className='flex flex-col w-full  mx-auto h-5/6 mt-8 bg-[#151C2C] border-2 border-[#182237] rounded-md'>
       <thead className='flex'>
         <tr className='basis-full items-center flex bg-[#182237] h-[3rem]' >
           <th className='basis-1/5'>Date</th>
@@ -13,9 +13,9 @@ const Transaction = async() => {
           <th className='basis-1/5'>Amount</th>
         </tr>
       </thead>
-      <tbody className='flex flex-col w-full mt-4'>
+      <tbody className='flex flex-col w-full mt-4 custom-scrollbar overflow-y-scroll'>
         {HistoryTransactions.map((items, index) => (
-          <tr key={index} className='flex w-full h-[3rem] items-center my-2'>
+          <tr key={index} className='flex w-full my-4 items-center my-2'>
             <td className='basis-1/5 text-center'>{items.transaction_date.toLocaleDateString()}</td>
             <td className='basis-1/5 text-center'>{items.transaction_type}</td>
             <td className='basis-1/5 text-center'>{items.transaction_category}</td>

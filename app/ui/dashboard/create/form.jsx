@@ -5,7 +5,7 @@ import CoreForm from './formsub/coreForm';
 const Form = () => {
    
     return (
-        <form className="entry-form w-7/12" action={addExpense} >
+        <form className="entry-form w-6/12" action={addExpense} >
             <CoreForm/>
         </form>
     )

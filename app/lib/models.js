@@ -6,7 +6,7 @@ const expenseSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
-    trasaction_amount: {
+    transaction_amount: {
       type: Number,
       required: true,
       min: 0
@@ -19,6 +19,10 @@ const expenseSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
+    transaction_date:{
+      type:Date,
+      required:true
+    }
   },
   { timestamps: true }
 );

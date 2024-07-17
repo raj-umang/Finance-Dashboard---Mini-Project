@@ -20,6 +20,25 @@ export const navLinks = [
   },
 ];
 
+export const entries = [
+  {
+    label: "Income",
+    value: "income",
+  },
+  {
+    label: "Expense",
+    value: "expense",
+  },
+  {
+    label: "Saving",
+    value: "saving",
+  },
+  {
+    label: "Investment",
+    value: "investment",
+  },
+];
+
 export const entryTypes = {
   income: "#5a8c49",
   expense: "#db3d3d",

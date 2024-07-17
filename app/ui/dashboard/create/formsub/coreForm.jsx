@@ -1,4 +1,4 @@
-import { entryTypes } from "@/app/constants/data";
+import { entries } from "@/app/constants/data";
 import { IoMdAddCircleOutline } from "react-icons/io";
 const CoreForm = () => {
     return (
@@ -10,7 +10,7 @@ const CoreForm = () => {
                     <option value="" disabled>
                         Select a category
                     </option>
-                    {entryTypes.map((item) => (
+                    {entries.map((item) => (
                         <option
                             key={item.value}
                         >

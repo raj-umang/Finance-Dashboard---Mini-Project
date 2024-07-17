@@ -223,12 +223,24 @@ export const HistoryTransactions = [
 
 ]
 
+export const getExpenses = async()=>{
+    "use server"
+    try {
+        const all_items = await fetchTransactions()
+        const only_expenses = all_items.filter(item=>item.transaction_type==='expense')
+        return only_expenses;
+
+    } catch (error) {
+        throw new Error(error)
+    }
+}
+
 export const addExpense = async (formData) => {
     "use server"
     const { type, date, amount, category, comment } = Object.fromEntries(formData);
     try {
         connectToDb()
-        console.log(type, date, amount, category, comment, formData)
+        // console.log(type, date, amount, category, comment, formData)
         const record = new Expense({
             transaction_type: type,
             transaction_amount: amount,
@@ -245,6 +257,7 @@ export const addExpense = async (formData) => {
 }
 
 export const fetchTransactions = async () => {
+    "use server"
     try {
         connectToDb();
         const transactions = await Expense.find();

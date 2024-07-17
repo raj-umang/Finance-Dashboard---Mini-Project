@@ -1,5 +1,6 @@
 import React from 'react'
 import { fetchTransactions} from '@/app/lib/data'
+import { entryTypes } from '@/app/constants/data';
 const Transaction = async() => {
   const HistoryTransactions = await fetchTransactions();
   return (
@@ -17,7 +18,7 @@ const Transaction = async() => {
         {HistoryTransactions.map((items, index) => (
           <tr key={index} className='flex w-full my-4 items-center my-2'>
             <td className='basis-1/5 text-center'>{items.transaction_date.toLocaleDateString()}</td>
-            <td className='basis-1/5 text-center'>{items.transaction_type}</td>
+            <td className='basis-1/5 text-center' style={{backgroundColor:`${entryTypes[items.transaction_type]}`,borderRadius:"8px"}}>{items.transaction_type}</td>
             <td className='basis-1/5 text-center'>{items.transaction_category}</td>
             <td className='basis-2/5 text-center'>{items.transaction_comments}</td>
             <td className='basis-1/5 text-center'>{items.transaction_amount}</td>

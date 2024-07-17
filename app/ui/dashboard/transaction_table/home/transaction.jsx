@@ -1,8 +1,9 @@
+import { entryTypes } from "@/app/constants/data";
 import { fetchTransactions } from "@/app/lib/data";
 async function Transaction() {
   const HomeTransactions = await fetchTransactions();
   function getTopFiveLatest(arr) {
-    return arr.slice().sort((a, b) => b.transaction_date - a.transaction_date).slice(0, 5);
+    return arr.sort((a, b) => b.transaction_date - a.transaction_date).slice(0, 5);
   }
   const topFive = getTopFiveLatest(HomeTransactions);
   return (
@@ -21,11 +22,11 @@ async function Transaction() {
         <tbody className='flex flex-col w-full bg-[#182237] mt-4'>
           {topFive.map((items, index) => (
             <tr key={index} className='flex w-full h-14 items-center'>
-              <td className='basis-1/5 text-center '>{items.transaction_date.toLocaleDateString()}</td>
-              <td className='basis-1/5 text-center '>{items.transaction_type}</td>
-              <td className='basis-1/5 text-center '>{items.transaction_category}</td>
-              <td className='basis-2/5 text-center '>{items.transaction_comments}</td>
-              <td className='basis-1/5 text-center '>{items.transaction_amount}</td>
+              <td className='basis-1/5 text-center'>{items.transaction_date.toLocaleDateString()}</td>
+              <td className='basis-1/5 text-center' style={{backgroundColor:`${entryTypes[items.transaction_type]}`,borderRadius:"8px"}} >{items.transaction_type}</td>
+              <td className='basis-1/5 text-center'>{items.transaction_category}</td>
+              <td className='basis-2/5 text-center'>{items.transaction_comments}</td>
+              <td className='basis-1/5 text-center'>{items.transaction_amount}</td>
             </tr>
           ))}
         </tbody>

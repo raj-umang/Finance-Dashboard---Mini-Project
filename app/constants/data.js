@@ -20,48 +20,32 @@ export const navLinks = [
   },
 ];
 
-export const entryTypes = [
-  {
-    label: "Income",
-    value: "income",
-    color: "#5a8c49",
-  },
-  {
-    label: "Expense",
-    value: "expense",
-    color: "#db3d3d",
-  },
-  {
-    label: "Saving",
-    value: "saving",
-    color: "#2d7feb",
-  },
-  {
-    label: "Investment",
-    value: "investment",
-    color: "#ccab33",
-  },
-];
+export const entryTypes = {
+  income: "#5a8c49",
+  expense: "#db3d3d",
+  saving: "#2d7feb",
+  investment: "#ccab33"
+};
 
 export const category = [
-    {
-        label:"Food",
-        value:"Food",
-        color:"orange"
-    },
-    {
-        label:"Rent",
-        value:"rent",
-        color:"yellow"
-    },
-    {
-        label:"Travel",
-        value:"travel",
-        color:"gray"
-    },
-    {
-        label:"Recreation",
-        value:"expense",
-        color:"red"
-    }
+  {
+    label: "Food",
+    value: "Food",
+    color: "orange"
+  },
+  {
+    label: "Rent",
+    value: "rent",
+    color: "yellow"
+  },
+  {
+    label: "Travel",
+    value: "travel",
+    color: "gray"
+  },
+  {
+    label: "Recreation",
+    value: "expense",
+    color: "red"
+  }
 ]

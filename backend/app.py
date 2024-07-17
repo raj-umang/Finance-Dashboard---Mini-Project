@@ -43,6 +43,7 @@ def predict():
     predictions = predictions * scale
     y = y * scale
 
+    plt.style.use('dark_background')
     plt.figure(figsize=(10, 5))
     plt.plot(y, label='Original Price', color='green')
     plt.plot(predictions, label='Predicted Price', color='red')
@@ -50,6 +51,7 @@ def predict():
     plt.xlabel('Days')
     plt.ylabel('Price')
     plt.legend()
+    plt.grid(True)
 
     img = io.BytesIO()
     plt.savefig(img, format='png')

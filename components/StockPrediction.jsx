@@ -1,7 +1,6 @@
 // app/components/StockPrediction.js
 
 import { useEffect, useState } from "react";
-import styles from "./stock.module.css";
 
 const StockPrediction = ({ stockSymbol }) => {
   const [predictions, setPredictions] = useState([]);
@@ -11,6 +10,7 @@ const StockPrediction = ({ stockSymbol }) => {
     const fetchPredictions = async () => {
       const response = await fetch(`/api/predict?stockSymbol=${stockSymbol}`);
       const data = await response.json();
+
       setPredictions(data.predicted_prices || []);
       setPlotUrl(data.plot_url || "");
     };
@@ -21,26 +21,23 @@ const StockPrediction = ({ stockSymbol }) => {
   const limitedPredictions = predictions.slice(0, 10);
 
   return (
-    <div className={styles.container}>
-      <div>
-        <h2 className={styles.title}>Predicted Prices for {stockSymbol}</h2>
-        <ul className={styles.list}>
-          {limitedPredictions.map((price, index) => (
-            <li key={index} className={styles.listItem}>
-              {price.toFixed(2)}
-            </li>
-          ))}
-        </ul>
-      </div>
+    <div className="max-w-lg mx-auto my-5 p-5 border border-gray-300 rounded-lg shadow-lg bg-gray-50">
+      <h2 className="text-2xl mb-4 text-gray-800">
+        Predicted Prices for {stockSymbol}
+      </h2>
+      <ul className="list-none p-0">
+        {limitedPredictions.map((price, index) => (
+          <li key={index} className="py-2 border-b border-gray-200 text-lg">
+            {price.toFixed(2)}
+          </li>
+        ))}
+      </ul>
       {plotUrl && (
-        <div className={styles.plotContainer}>
-          <div className={styles.plotHeader}>Price Prediction Graph</div>
-          <img
-            src={plotUrl}
-            alt="Prediction Plot"
-            className={styles.plotImage}
-          />
-        </div>
+        <img
+          src={plotUrl}
+          alt="Prediction Plot"
+          className="w-full h-auto mt-5 rounded-lg shadow-md"
+        />
       )}
     </div>
   );

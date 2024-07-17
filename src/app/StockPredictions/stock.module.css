@@ -1,0 +1,47 @@
+.container {
+  background-color: var(--bgSoft);
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  gap: 20px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.title {
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: var(--textSoft);
+}
+
+.list {
+  list-style-type: none;
+  padding: 0;
+  color: var(--textSoft);
+}
+
+.listItem {
+  padding: 10px;
+  border-bottom: 1px solid var(--textSoft);
+  font-size: 15px;
+}
+
+.listItem:last-child {
+  border-bottom: none;
+}
+
+.plotContainer {
+  background-color: var(--bgSoft);
+}
+
+.plotHeader {
+  text-align: center;
+  font-weight: bold;
+  color: var(--bgSoft);
+  margin-bottom: 10px;
+}
+
+.plotImage {
+  width: 100%;
+  height: auto;
+}

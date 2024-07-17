@@ -1,15 +1,13 @@
+import { entryTypes } from "@/app/constants/data";
 import { MdSupervisedUserCircle } from "react-icons/md";
 
-function Card() {
+function Card({data,type,title}) {
   return (
     <div className="bg-[#182237] p-20 rounded-lg flex gap-5 cursor-pointer w-full hover:bg-[#2e374a] mx-2">
       <MdSupervisedUserCircle size={24} />
       <div className="flex flex-col gap-5">
-        <span>Total Users</span>
-        <span className="font-medium text-2xl">10.273</span>
-        <span className="text-2xl font-light">
-          <span className="text-lime-400">12%</span>more than previous week
-        </span>
+        <span className="text-3xl" >Total {title}</span>
+        <span className="font-medium text-3xl" style={{color:`${entryTypes[type]}`}}>₹{data}</span>
       </div>
     </div>
   );

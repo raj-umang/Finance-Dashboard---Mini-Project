@@ -6,10 +6,10 @@ import {
   MdAnalytics,
   MdOutlineSettings,
   MdHelpCenter,
-  MdLogout,
   MdControlPoint,
 } from "react-icons/md";
 import Image from "next/image";
+import { useSession } from "next-auth/react";
 
 const menuItems = [
   {
@@ -60,24 +60,35 @@ const menuItems = [
 ];
 
 const Sidebar = () => {
+  const { data: session } = useSession();
+
+  let displayName = "Guest";
+
+  if (session?.user?.email) {
+    const emailParts = session.user.email.split("@");
+    displayName = emailParts[0];
+  }
+
   return (
     <div className="sticky top-10">
       <div className="flex items-center gap-5 mb-5">
         <Image
-          src="/noavatar.png"
+          src="/finance.jpg"
           alt=""
           width="50"
           height="50"
           className="rounded-full object-cover"
         />
         <div className="flex flex-col">
-          <span className="font-medium">John Doe</span>
+          <span className="font-medium">{displayName}</span>
         </div>
       </div>
       <ul className="list-none">
         {menuItems.map((cat) => (
-          <li key={cat.title} >
-            <span className="text-[#b7bac1] font-bold text-sm my-[10px]">{cat.title}</span>
+          <li key={cat.title}>
+            <span className="text-[#b7bac1] font-bold text-sm my-[10px]">
+              {cat.title}
+            </span>
             {cat.list.map((item) => (
               <MenuLink item={item} key={item.title} />
             ))}

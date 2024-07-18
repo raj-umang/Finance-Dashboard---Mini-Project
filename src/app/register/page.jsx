@@ -31,7 +31,7 @@ const Register = () => {
       return;
     }
 
-    if (!password || password.length < 8) {
+    if (!password) {
       setError("Password is invalid");
       return;
     }

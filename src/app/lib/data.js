@@ -46,6 +46,7 @@ export const addExpense = async (formData) => {
   "use server";
   const { type, date, amount, category, comment } =
     Object.fromEntries(formData);
+  let redirection = false;
   try {
     connectToDb();
     // console.log(type, date, amount, category, comment, formData)
@@ -58,12 +59,15 @@ export const addExpense = async (formData) => {
     });
     const done = await record.save();
     if (done) {
-      revalidatePath("/dashboard/transactions");
       revalidatePath("/dashboard");
-      redirect("/dashboard");
+      revalidatePath("/dashboard/transactions");
+      redirection = true;
     } else return -1;
   } catch (error) {
     throw new Error(error);
+  }
+  if (redirection) {
+    redirect("/dashboard");
   }
 };
 

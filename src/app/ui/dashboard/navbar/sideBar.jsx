@@ -59,7 +59,7 @@ const menuItems = [
   },
 ];
 
-const Sidebar = () => {
+const Sidebar = ({ username, email }) => {
   return (
     <div className="sticky top-10">
       <div className="flex items-center gap-5 mb-5">
@@ -71,13 +71,15 @@ const Sidebar = () => {
           className="rounded-full object-cover"
         />
         <div className="flex flex-col">
-          <span className="font-medium">John Doe</span>
+          <span className="font-medium">{username}</span>
         </div>
       </div>
       <ul className="list-none">
         {menuItems.map((cat) => (
-          <li key={cat.title} >
-            <span className="text-[#b7bac1] font-bold text-sm my-[10px]">{cat.title}</span>
+          <li key={cat.title}>
+            <span className="text-[#b7bac1] font-bold text-sm my-[10px]">
+              {cat.title}
+            </span>
             {cat.list.map((item) => (
               <MenuLink item={item} key={item.title} />
             ))}

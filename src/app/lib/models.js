@@ -7,10 +7,10 @@ const expenseSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
-    trasaction_amount: {
+    transaction_amount: {
       type: Number,
       required: true,
-      min: 0
+      min: 0,
     },
     transaction_category: {
       type: String,
@@ -23,7 +23,6 @@ const expenseSchema = new mongoose.Schema(
   },
   { timestamps: true }
 );
-
 
 const userSchema = new mongoose.Schema(
   {
@@ -57,4 +56,5 @@ userSchema.pre("save", async function (next) {
 });
 
 export const User = mongoose.models.User || mongoose.model("User", userSchema);
-export const Expense = mongoose.models.Transaction || mongoose.model("Transaction", expenseSchema);
+export const Expense =
+  mongoose.models.Transaction || mongoose.model("Transaction", expenseSchema);

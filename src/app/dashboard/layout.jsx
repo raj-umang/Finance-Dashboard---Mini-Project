@@ -1,22 +1,20 @@
-import React from "react";
-import Sidebar from "../ui/dashboard/sidebar/sidebar";
-import Navbar from "../ui/dashboard/navbar/navbar";
-import styles from "../ui/dashboard/dashboard.module.css";
-import Footer from "../ui/dashboard/footer/footer";
-import "../globals.css";
+
+import Footer from '../ui/dashboard/footer/footer';
+import Sidebar from '../ui/dashboard/navbar/sideBar';
+import Navbar from '../ui/dashboard/top-navbar/navbar';
 const Layout = ({ children }) => {
-  return (
-    <div className={styles.container}>
-      <div className={styles.menu}>
-        <Sidebar />
-      </div>
-      <div className={styles.content}>
-        <Navbar />
-        {children}
-        <Footer />
-      </div>
-    </div>
-  );
+    return (
+        <div className='flex'>
+            <div className='basis-1/6 bg-[#182237] p-5'>
+                <Sidebar />
+            </div>
+            <div className='basis-5/6 p-5 relative'>
+                <Navbar/>
+                {children}
+                <Footer />
+            </div>
+        </div>
+    );
 };
 
 export default Layout;

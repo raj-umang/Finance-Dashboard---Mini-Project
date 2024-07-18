@@ -1,0 +1,119 @@
+.entry-form {
+    @apply flex flex-col items-start justify-center gap-4 mt-6;
+  }
+  
+  .entry-form .form-group {
+    @apply flex flex-col items-start justify-start gap-1 w-full;
+  }
+  
+  .entry-form .form-group label {
+    @apply text-lg font-semibold text-[var(--primary-color)];
+  }
+  
+  .entry-form .form-group .type-selector {
+    @apply p-1 rounded-lg bg-white flex justify-start items-center gap-2 shadow-md;
+  }
+  
+  .entry-form .form-group .type-selector button {
+    @apply px-4 py-1 rounded-lg bg-transparent text-[var(--auxiliary-color)] transition-all;
+  }
+  
+  .entry-form .form-group .type-selector button:hover {
+    @apply bg-gray-200 text-[var(--primary-color)];
+  }
+  
+  .entry-form .form-group .type-selector button.active {
+    @apply px-4 py-1 rounded-lg text-white;
+  }
+  
+  .entry-form .form-group input, .entry-form .form-group textarea, .entry-form .form-group select {
+    @apply px-4 py-2 text-left rounded-lg bg-white shadow-md text-[var(--primary-color)] w-full;
+  }
+  
+  .entry-form .submit-button {
+    @apply flex justify-center items-center gap-2 px-4 py-2 font-medium rounded-lg bg-[var(--primary-color)] text-white transition-all
+  }
+  
+  .entry-form .submit-button svg {
+    @apply w-4 h-4;
+  }
+  
+  .entry-form .submit-button:hover {
+    @apply opacity-75
+  }
+  
+  .entry-form .cancel-button {
+    @apply flex justify-center items-center gap-2 px-4 py-2 font-medium rounded-lg bg-red-600 text-white transition-all
+  }
+  
+  .entry-form .cancel-button:hover {
+    @apply opacity-75
+  }
+
+  .entry-form .form-group {
+    @apply flex flex-col items-start justify-start gap-1 w-full;
+  }
+  
+  .entry-form .form-group label {
+    @apply text-lg font-semibold text-[var(--primary-color)];
+  }
+  
+  .entry-form .form-group .type-selector {
+    @apply p-1 rounded-lg bg-white flex justify-start items-center gap-2 shadow-md;
+  }
+  
+  .entry-form .form-group .type-selector button {
+    @apply px-4 py-1 rounded-lg bg-transparent text-[var(--auxiliary-color)] transition-all;
+  }
+  
+  .entry-form .form-group .type-selector button:hover {
+    @apply bg-gray-200 text-[var(--primary-color)];
+  }
+  
+  .entry-form .form-group .type-selector button.active {
+    @apply px-4 py-1 rounded-lg text-white;
+  }
+  
+  .entry-form .form-group input, .entry-form .form-group textarea, .entry-form .form-group select {
+    @apply px-4 py-2 text-left rounded-lg bg-white shadow-md text-[var(--primary-color)] w-full;
+  }
+
+  .entry-form .form-group .type-selector {
+    @apply p-1 rounded-lg bg-white flex justify-start items-center gap-2 shadow-md;
+  }
+  
+  .entry-form .form-group .type-selector button {
+    @apply px-4 py-1 rounded-lg bg-transparent text-[var(--auxiliary-color)] transition-all;
+  }
+  
+  .entry-form .form-group .type-selector button:hover {
+    @apply bg-gray-200 text-[var(--primary-color)];
+  }
+  
+  .entry-form .form-group .type-selector button.active {
+    @apply px-4 py-1 rounded-lg text-white;
+  }
+  /* .navigation-links__container ul li.active {
+    @apply font-semibold bg-[var(--secondary-color)] text-[var(--primary-color)] border-l-4 border-[#2C3775];
+  } */
+
+  .entry-form .form-group .type-selector button.active {
+    @apply px-4 py-1 rounded-lg text-white;
+  }
+
+  .create-page {
+    @apply flex items-center justify-center flex-wrap w-full gap-4 px-8;
+  }
+
+  .page-header {
+    @apply w-full flex flex-col justify-center items-start mt-6 mb-2;
+  }
+  
+  .page-header h2 {
+    @apply text-2xl font-bold text-[var(--primary-color)];
+  }
+  
+  .page-header p {
+    @apply text-sm font-medium text-[var(--auxiliary-color)];
+  }
+  

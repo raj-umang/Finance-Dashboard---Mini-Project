@@ -1,7 +1,7 @@
-export const addExpense = async (fromData)=>{
-    const {} = Object.fromEntries(FormData)
-}
-"use server";
+export const addExpense = async (fromData) => {
+  const {} = Object.fromEntries(FormData);
+};
+("use server");
 
 import { sessionOptions, defaultSession } from "../libs";
 import { getIronSession } from "iron-session";

@@ -6,10 +6,9 @@ const PageHeader = ({ title, subtitle }) => {
   return (
     <>
       <header className="page-header">
-        <h2>{title}</h2>
-        <p>{subtitle}</p>
+        <h2 className="text-3xl">{title}</h2>
+        <p className="text-xl">{subtitle}</p>
       </header>
-
       <hr className="w-full border-1 border-gray-300" />
     </>
   );

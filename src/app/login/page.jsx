@@ -44,9 +44,9 @@ const Login = () => {
 
     if (res?.error) {
       setError("Invalid email or password");
+      if (res?.url) router.replace("/dashboard");
     } else {
       setError("");
-      router.replace("/dashboard");
     }
   };
 
@@ -60,9 +60,21 @@ const Login = () => {
         <div className={styles.form}>
           <h1 className={styles.h1}>Login</h1>
           <form onSubmit={handleSubmit}>
-            <input type="text" placeholder="Email" required />
-            <input type="password" placeholder="Password" required />
-            <button type="submit">Sign In</button>
+            <input
+              type="text"
+              className={styles.input}
+              placeholder="Email"
+              required
+            />
+            <input
+              type="password"
+              className={styles.input}
+              placeholder="Password"
+              required
+            />
+            <button type="submit" className={styles.button}>
+              Sign In
+            </button>
             <p className={styles.errorMessage}>{error && error}</p>
           </form>
           <div className={styles.orText}>- OR -</div>

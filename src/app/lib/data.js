@@ -1,6 +1,6 @@
 import { revalidatePath } from "next/cache";
 import { Expense } from "./models";
-import { connect } from "./utils";
+import connect from "./utils";
 import { redirect } from "next/navigation";
 
 export const getInvestment = async () => {

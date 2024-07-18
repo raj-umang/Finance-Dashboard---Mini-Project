@@ -1,39 +1,39 @@
-.container{
-    display: flex;
+.container {
+  display: flex;
 }
 
-.menu{
-    flex: 1;
-    background-color: var(--bgSoft);
-    padding: 20px;
+.menu {
+  flex: 1;
+  background-color: var(--bgSoft);
+  padding: 20px;
 }
 
-.content{
-    flex: 4;
-    padding: 20px;
- flex: 4;
- padding: 20px;
- position: relative;
+.content {
+  flex: 4;
+  padding: 20px;
+  flex: 4;
+  padding: 20px;
+  position: relative;
 }
 
-.wapper{
-    display: flex;
-    gap: 20px;
-    margin-top: 20px;
+.wapper {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
 }
 
-.main{
-    flex: 3;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+.main {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
-.cards{
-    display: flex;
-    gap: 20px;
-    justify-content: space-between;
+.cards {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
 }
-.side{
-    flex: 1;
+.side {
+  flex: 1;
 }

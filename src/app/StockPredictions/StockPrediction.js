@@ -27,7 +27,7 @@ const StockPrediction = ({ stockSymbol }) => {
         <ul className={styles.list}>
           {limitedPredictions.map((price, index) => (
             <li key={index} className={styles.listItem}>
-              {price.toFixed(2)}
+              ${price.toFixed(2)}
             </li>
           ))}
         </ul>

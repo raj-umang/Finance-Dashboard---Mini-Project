@@ -2,11 +2,11 @@
 
 import React from "react";
 import { useSession } from "next-auth/react";
-import Sidebar from "../ui/dashboard/sidebar/sidebar";
-import Navbar from "../ui/dashboard/navbar/navbar";
-import styles from "../ui/dashboard/dashboard.module.css";
 import Footer from "../ui/dashboard/footer/footer";
 import "../globals.css";
+import styles from "../ui/dashboard/dashboard.module.css";
+import Sidebar from "../ui/dashboard/navbar/sideBar";
+import Navbar from "../ui/dashboard/top-navbar/navbar";
 const Layout = ({ children }) => {
   const { data: session } = useSession();
   return (

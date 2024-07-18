@@ -1,34 +1,32 @@
 import { User } from "../../lib/models";
 import connect from "../../lib/utils";
-import { NextResponse } from "next/server";
 import bcrypt from "bcryptjs";
+import { NextResponse } from "next/server";
 
 export const POST = async (request) => {
-  console.log("Register endpoint hit");
-  const { username, email, password } = await request.json();
-  console.log("Email:", email, "Password:", password);
+  const { email, password } = await request.json();
 
   await connect();
 
-  if (!username || !email || !password) {
-    return new NextResponse("All fields are required", { status: 400 });
+  const existingUser = await User.findOne({ email });
+
+  if (existingUser) {
+    return new NextResponse("Email is already in use", { status: 400 });
   }
 
-  try {
-    const existingUser = await User.findOne({ email });
-    if (existingUser) {
-      return new NextResponse("Email is already in use", { status: 400 });
-    }
+  const hashedPassword = await bcrypt.hash(password, 5);
+  const newUser = new User({
+    email,
+    password: hashedPassword,
+  });
 
-    const newUser = new User({
-      username,
-      email,
-      password: await bcrypt.hash(password, 10),
-    });
+  try {
     await newUser.save();
-    return new NextResponse("User is registered", { status: 201 });
+    return new NextResponse("user is registered", { status: 200 });
   } catch (err) {
-    console.error("Error saving user:", err);
-    return new NextResponse("Internal Server Error", { status: 500 });
+    console.error(err);
+    return new NextResponse(err, {
+      status: 500,
+    });
   }
 };

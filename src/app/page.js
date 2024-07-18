@@ -1,9 +1,6 @@
-import React from 'react'
+import { redirect } from "next/navigation";
 
 const Home = () => {
-  return (
-    <div className='bg-black'>Home</div>
-  )
-}
-
-export default Home
+  return redirect("/dashboard");
+};
+export default Home;

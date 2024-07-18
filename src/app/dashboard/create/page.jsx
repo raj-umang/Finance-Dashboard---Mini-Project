@@ -1,5 +1,5 @@
 import Form from "@/app/ui/dashboard/create/form";
-import PageHeader from "@/components/shared/PageHeader";
+import PageHeader from "../../../../components/shared/PageHeader";
 
 export default function TransactionPage() {
   return (
@@ -8,7 +8,7 @@ export default function TransactionPage() {
         title={"Create an entry"}
         subtitle={"Select the type of the entry and create it."}
       />
-      <Form/>
+      <Form />
     </section>
   );
 }

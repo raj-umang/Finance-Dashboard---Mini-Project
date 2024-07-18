@@ -28,7 +28,6 @@ const Register = () => {
     const email = e.target.email.value;
     const password = e.target.password.value;
 
-    // Validation
     if (!username) {
       setError("Username is required");
       return;
@@ -55,7 +54,7 @@ const Register = () => {
 
       if (res.status === 400) {
         setError("This email is already registered");
-      } else if (res.status === 200) {
+      } else if (res.status === 201) {
         setError("");
         router.push("/login");
       }
@@ -64,10 +63,6 @@ const Register = () => {
       console.error(error);
     }
   };
-
-  if (sessionStatus === "loading") {
-    return <h1>Loading...</h1>;
-  }
 
   return (
     sessionStatus !== "authenticated" && (

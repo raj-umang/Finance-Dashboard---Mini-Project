@@ -9,7 +9,7 @@ import StockPrediction from "../StockPredictions/StockPrediction";
 import "../globals.css";
 
 const Dashboard = () => {
-  const [stockSymbol, setStockSymbol] = useState("GOOG");
+  const [stockSymbol, setStockSymbol] = useState("GC=F");
 
   return (
     <div className={styles.wrapper}>

@@ -47,7 +47,7 @@ const Register = () => {
 
       if (res.status === 400) {
         setError("This email is already registered");
-      } else if (res.status === 201) {
+      } else if (res.status === 200) {
         setError("");
         router.push("/login");
       }

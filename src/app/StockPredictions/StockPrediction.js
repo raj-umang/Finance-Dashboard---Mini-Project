@@ -18,7 +18,10 @@ const StockPrediction = ({ stockSymbol }) => {
     fetchPredictions();
   }, [stockSymbol]);
 
-  const limitedPredictions = predictions.slice(0, 10);
+  const limitedPredictions = predictions.slice(
+    predictions.length - 10,
+    predictions.length
+  );
 
   return (
     <div className={styles.container}>

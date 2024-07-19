@@ -17,7 +17,7 @@ const Transaction = async () => {
         {HistoryTransactions.map((items, index) => (
           <tr key={index} className="flex w-full my-4 items-center my-2">
             <td
-              className="basis-1/5 ml-5 text-center"
+              className="basis-1/5 text-center ml-5"
               style={{
                 backgroundColor: `${entryTypes[items.transaction_type]}`,
                 borderRadius: "8px",

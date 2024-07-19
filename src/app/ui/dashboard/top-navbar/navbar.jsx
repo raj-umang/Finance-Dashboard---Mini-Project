@@ -31,7 +31,6 @@ const Navbar = () => {
             </>
           ) : (
             <>
-              <span>{session.user?.email}</span>
               <li>
                 <button
                   onClick={() => signOut()}

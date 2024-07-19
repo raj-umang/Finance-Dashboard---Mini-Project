@@ -24,9 +24,9 @@ async function Transaction() {
         </thead>
         <tbody className="flex flex-col w-full bg-[#182237] mt-4">
           {topFive.map((items, index) => (
-            <tr key={index} className="flex w-full ml-5 h-14 items-center">
+            <tr key={index} className="flex w-full h-14 items-center">
               <td
-                className="basis-1/5 text-center"
+                className=" ml-5 basis-1/5 text-center"
                 style={{
                   backgroundColor: `${entryTypes[items.transaction_type]}`,
                   borderRadius: "8px",

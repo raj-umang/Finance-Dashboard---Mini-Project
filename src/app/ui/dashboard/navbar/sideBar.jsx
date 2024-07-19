@@ -4,9 +4,9 @@ import {
   MdDashboard,
   MdAttachMoney,
   MdAnalytics,
-  MdOutlineSettings,
   MdHelpCenter,
   MdControlPoint,
+  MdAccessTime,
 } from "react-icons/md";
 import Image from "next/image";
 import { useSession } from "next-auth/react";
@@ -48,12 +48,12 @@ const menuItems = [
       {
         title: "Settings",
         path: "/dashboard/settings",
-        icon: <MdOutlineSettings />,
+        icon: <MdAccessTime color="green" />,
       },
       {
         title: "Help",
         path: "/dashboard/Help",
-        icon: <MdHelpCenter />,
+        icon: <MdAccessTime color="green" />,
       },
     ],
   },

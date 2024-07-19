@@ -1,8 +1,14 @@
 import React from "react";
 import Transaction from "../ui/dashboard/transaction_table/home/transaction";
 import Chart from "../ui/dashboard/chart/chart";
+import "../globals.css";
 import Card from "../ui/dashboard/card/Card";
-import { getExpenses, getIncome, getInvestment } from "../lib/data";
+import {
+  fetchTransactions,
+  getExpenses,
+  getIncome,
+  getInvestment,
+} from "../lib/data";
 import PieChartComponent from "../ui/dashboard/chart/Pie";
 import { getServerSession } from "next-auth";
 import { redirect } from "next/navigation";
@@ -12,6 +18,13 @@ const Dashboard = async () => {
   if (!session) {
     redirect("/login");
   }
+  const HomeTransactions = await fetchTransactions();
+  function getTopFiveLatest(arr) {
+    return arr
+      .sort((a, b) => b.transaction_date - a.transaction_date)
+      .slice(0, 5);
+  }
+  const topFive = getTopFiveLatest(HomeTransactions);
   const expenses = await getExpenses();
   const income = await getIncome();
   const investment = await getInvestment();
@@ -45,7 +58,7 @@ const Dashboard = async () => {
             income={income_summary}
           />
         </div>
-        <Transaction />
+        <Transaction topFive={JSON.parse(JSON.stringify(topFive))} />
         <Chart data={JSON.parse(JSON.stringify(expenses))} />
       </div>
     </div>

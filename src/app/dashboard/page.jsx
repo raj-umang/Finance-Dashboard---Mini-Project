@@ -10,10 +10,14 @@ import {
   getInvestment,
 } from "../lib/data";
 import PieChartComponent from "../ui/dashboard/chart/Pie";
-import Session from "../../../components/Session";
+import { getServerSession } from "next-auth";
+import { redirect } from "next/navigation";
 
 const Dashboard = async () => {
-  <Session />;
+  const session = await getServerSession();
+  if (!session) {
+    redirect("/login");
+  }
   const HomeTransactions = await fetchTransactions();
   function getTopFiveLatest(arr) {
     return arr

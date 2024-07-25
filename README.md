@@ -1,36 +1,96 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+# Personal Finance Dashboard
 
-First, run the development server:
+## Abstract
+The Personal Finance Dashboard is a web application that helps users manage their financial transactions and investments. It allows users to add and view their transactions while featuring a predictive analytics function for selected stock prices. By combining transaction management with stock price predictions, this dashboard provides users with valuable insights to enhance their financial decision-making.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Team Members
+- Piyush Verma
+- Umang Raj
+- Prajwal H Rao
+- Sourav Kumar
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Table of Contents
+- [Introduction](#introduction)
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Screenshots](#screenshots)
+- [Contributing](#contributing)
+- [License](#license)
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Introduction
+The Personal Finance Dashboard is designed to be a one-stop solution for managing personal finances and making informed investment decisions. By leveraging machine learning models, it predicts stock prices, helping users make better investment choices.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Features
+- Add and view financial transactions.
+- Predictive analytics for selected stock prices.
+- Intuitive and responsive user interface built with Next.js.
+- Backend powered by Flask and Keras/TensorFlow for machine learning.
 
-## Learn More
+## Technologies Used
+- **Frontend:** Next.js
+- **Backend:** Flask
+- **Machine Learning:** Keras, TensorFlow
+- **Database:** [Specify your database, e.g., SQLite, PostgreSQL]
+- **Deployment:** [Specify your deployment platform, e.g., Heroku, Vercel]
 
-To learn more about Next.js, take a look at the following resources:
+## Installation
+### Prerequisites
+- Node.js
+- Python 3.x
+- [Specify any other prerequisites]
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Steps
+1. **Clone the repository:**
+   \`\`\`bash
+   git clone https://github.com/yourusername/personal-finance-dashboard.git
+   cd personal-finance-dashboard
+   \`\`\`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+2. **Install frontend dependencies:**
+   \`\`\`bash
+   cd frontend
+   npm install
+   \`\`\`
 
-## Deploy on Vercel
+3. **Install backend dependencies:**
+   \`\`\`bash
+   cd ../backend
+   pip install -r requirements.txt
+   \`\`\`
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+4. **Set up the database:**
+   [Provide instructions for setting up the database]
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+5. **Run the frontend:**
+   \`\`\`bash
+   cd ../frontend
+   npm run dev
+   \`\`\`
+
+6. **Run the backend:**
+   \`\`\`bash
+   cd ../backend
+   python app.py
+   \`\`\`
+
+## Usage
+1. **Open the application:**
+   Go to `http://localhost:3000` in your web browser.
+
+2. **Add Transactions:**
+   Navigate to the transactions section and add your financial transactions.
+
+3. **View Stock Predictions:**
+   Navigate to the stock prediction section, select a stock, and view the predicted prices.
+
+## Screenshots
+[Add screenshots here]
+
+## Contributing
+We welcome contributions! Please read our [Contributing Guidelines](CONTRIBUTING.md) for more information.
+
+## License
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.

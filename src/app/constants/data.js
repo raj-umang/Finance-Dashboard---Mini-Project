@@ -43,28 +43,33 @@ export const entryTypes = {
   income: "#5a8c49",
   expense: "#db3d3d",
   saving: "#2d7feb",
-  investment: "#ccab33"
+  investment: "#ccab33",
 };
 
 export const category = [
   {
     label: "Food",
     value: "Food",
-    color: "orange"
+    color: "orange",
   },
   {
     label: "Rent",
     value: "rent",
-    color: "yellow"
+    color: "yellow",
   },
   {
     label: "Travel",
     value: "travel",
-    color: "gray"
+    color: "gray",
+  },
+  {
+    label: "Expense",
+    value: "expense",
+    color: "orange",
   },
   {
     label: "Recreation",
     value: "expense",
-    color: "red"
-  }
-]
+    color: "red",
+  },
+];

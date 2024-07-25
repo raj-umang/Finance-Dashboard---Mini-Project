@@ -76,8 +76,6 @@ export const fetchTransactions = async () => {
   try {
     connect();
     const transactions = await Expense.find();
-    // revalidatePath("/dashboard");
-    // revalidatePath("/dashboard/transactions");
     return transactions;
   } catch (error) {
     throw new Error("failed to fetch transaction");
